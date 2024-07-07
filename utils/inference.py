@@ -8,7 +8,7 @@ from langchain.chains import RetrievalQA
 
 
 def predict_rag(qns:str,history=None)->str:
-    llm = LLM().get_llm_together()
+    llm = LLM().get_llm()
     retriever = RAG().get_retriever()
     template = """Answer the question based only on the following context:
     {context}
